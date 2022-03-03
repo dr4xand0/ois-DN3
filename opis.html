@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3. DN :: OIS 2020/2021</title>
+  <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {padding-top: 70px;}
+  </style>
+  </style><link rel="icon" href="./favicon.png"/>
+  <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
+  <script src="knjiznice/js/bootstrap.min.js"></script>
+  <script src="knjiznice/js/koda.js"></script>
+</head>
+<body>
+
+  <!-- ZAČETEK: Menujska vrstica na vrhu spletne strani -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
+          <span class="sr-only">Prikaži menu</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <!-- ZAČETEK: Ime vaše aplikacije -->
+        <a class="navbar-brand" href="index.html">eCepiva</a>
+        <!-- KONEC: Ime vaše aplikacije -->
+      </div>
+      <div class="collapse navbar-collapse" id="menujska-vrstica">
+        <ul class="nav navbar-nav">
+          <li><a href="opis.html">Opis ideje</a></li>
+          <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
+
+  <!-- ZAČETEK: Opis delovanja aplikacije -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Opis ideje, ki jo aplikacija podpira</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZAČETEK: Opis ideje, ki jo aplikacija podpira -->
+            <p>Ideja aplikacije je ozaveščanje ljudi o pomembnosti cepljenja in razbijanje mitov in lažnih informacij o cepivih. Ena izmed težav v procesu cepljenja je ta da ljudje niso dobro obveščeni katero cepivo je najboljše za njih. Namen te aplikacijo bo to da ljudi ki se želijo cepiti spoznaju katero cepivo je najboljše za njih, glede na starost, spol, zdravstveno stanje, ali je osoba že prebolela SARS-CoV-2, itd. Na ta način lahko ugotovimo katero cepivo je najboljše za določeno osebo. Ciljna publika te aplikacije je skupina ljudi ki ima izraženo željo za cepljenjem in ne ve katero cepivo prejeti, oz. koliko odmerkov prejet.    </p>
+            <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Uporabljeni zunanji viri podatkov</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
+            <p>Uporabljeni zunanji viri sta API klica z COVID sledilnika (https://api.sledilnik.org/api/vaccinations, https://api.sledilnik.org/api/daily-deaths-slovenia). Uporabljeni sta zato da se prikaže število cepljenjih ljudi in stopnja smrtnosti v času ko se več ljudi cepi. Uporabil sem tudi priporočila glede cepljenja z zvanične spletne strani NIJZ-a.  </p>
+            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Master/detail načrtovalski vzorec</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZAČETEK: Master/detail načrtovalski vzorec -->
+            <p>Master/detail, oz. načrtovalski vzorec v aplikaciji je uporabnik. Funkcija aplikacije se začne pritiskom na gumb 'Generiranje podatkov'. Klik na gumb bo zgeneriral tri paciente z njihovimi podatki. Pri izbiri pacienta iz drop-down menija dobimo ehrID pacienta ter po kliku na gumb 'Preberi podatke pacienta' nam se prikažejo informacijo o pacientu. Na podlagi tih podatkov izpiše se priporočeno cepivo ter število odmerkov ki bi oseba rabila prejet. </p>
+            <!-- KONEC: Master/detail načrtovalski vzorec -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Uporabljena tehnika za vizualizacijo podatkov</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
+            <p><strong>TO-DO</strong>: Na tem mestu je potrebno navesti uporabljeno tehniko vizualizacije podatkov (za pomoč lahko uporabite primer iz <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3.js galerije</a>) in zakaj je bila ta tehnika izbrana.</p>
+            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- KONEC: Opis delovanja aplikacije -->
+
+</body>
+</html>

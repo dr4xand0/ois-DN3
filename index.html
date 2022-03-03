@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3. DN :: OIS 2020/2021</title>
+  <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {padding-top: 70px;}
+  </style>
+	</style><link rel="icon" href="./favicon.png"/>
+  <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
+  <script src="knjiznice/js/bootstrap.min.js"></script>
+
+  <script src="knjiznice/js/koda.js"></script>
+</head>
+<body>
+
+  <!-- ZAČETEK: Menujska vrstica na vrhu spletne strani -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
+          <span class="sr-only">Prikaži menu</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <!-- ZAČETEK: Ime vaše aplikacije -->
+        <a class="navbar-brand" href="index.html">eCepiva</a>
+        <!-- KONEC: Ime vaše aplikacije -->
+      </div>
+      <div class="collapse navbar-collapse" id="menujska-vrstica">
+        <ul class="nav navbar-nav">
+          <li><a href="opis.html">Opis ideje</a></li>
+          <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
+          <li><a href="javascript: generirajPodatke()">Generiranje podatkov</a></li>
+          <li><a href="https://ropsten.etherscan.io/token/0xd080d510b8d3eb7a388b56c0e34ae376c69ce817?a=0x725e7ee043489963fb0656e590f88c11273d004d" target="_blank">Blockchain certifikat kakovosti</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
+
+  <!-- ZAČETEK: Vsebina aplikacije -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-8"><b>Preberi EHR zapis</b> obstoječega pacienta</div>
+              <div class="col-lg-4 col-md-4 col-sm-4"><select class="form-control input-sm" id="preberiObstojeciEHR" onchange="showID()"><option value=""></option></select></div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <span class="label label-default">EHR ID</span><input id="preberiEHRid" type="text" class="form-control input-mini" placeholder="EHRID">
+            <br>
+            <button type="button" class="btn btn-primary btn-xs" onclick="generirajPodatkePacienta()">Preberi podatke pacienta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="PodatkiOseba" style="position: relative">
+          <div class="row">
+            <div class="VitalneVrednosti">
+              <div class="patient-info">
+                <h4 id="patient-name">Ime in priimek: <span id="imePacientaField"></span></h4>
+                <p>Datum rojstva: <span id="datumRojstvaPacientaField"></span></p>
+                <p>Spol: <span id="spolPacienta"></span></p>
+                <p>Država: <span id="drzavaPacienta"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="PodrobniPodatkiOseba" style="position: relative">
+          <div class="row">
+            <div class="col-md-8 bordered">
+              <div class="row" style="min-height: 67px;">
+                <div class="col-md-4 bordered  centered">
+                  <p>Težina: <span id="tezinaPacienta"></span></p>
+                  <div class="value">
+                    Alergije: <span id="alergijaField"></span>
+                  </div>
+                </div>
+                <div class="col-md-4 bordered  centered">
+                  <p>Višina: <span id="visinaField"></span></p>
+                  <div class="value">
+                    Bolezen: <span id="bolezenField"></span>
+                  </div>
+                </div>
+                <div class="col-md-4 centered">
+                  <p>Ali je pacient že boloval z SARS-CoV-2: <span id="bolovalField"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="PodrobniZazeleniPodatkiOseba" style="position: relative">
+          <div class="row">
+            <div>
+              <div>
+                <div>
+                  <p>Priporočeno cepivo: <span id="cepivoField"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <hr>
+    </div>
+  </div>
+  <!-- KONEC: Vsebina aplikacije -->
+  </div>
+</body>
+</html>
